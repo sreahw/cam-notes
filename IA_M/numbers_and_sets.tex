@@ -241,7 +241,7 @@ In this chapter, we will look at the basic building blocks of mathematics, namel
   $(A=B)\Leftrightarrow (A\subseteq B \text{ and }B\subseteq A)$
 \end{thm}
 
-Suppose $X$ is a set and $P$ is the property of some elements in $x$, we can write a set $\{x\in X:P(x)\}$ for the subset of $x$ comprising of the elements for which $P(x)$ is true. e.g.\ $\{n\in \N : n \text{ is prime}\}$ is the set of all primes.
+Suppose $X$ is a set and $P$ is the property of some elements in $X$, we can write a set $\{x\in X:P(x)\}$ for the subset of $X$ comprising of the elements for which $P(x)$ is true. e.g.\ $\{n\in \N : n \text{ is prime}\}$ is the set of all primes.
 
 \begin{defi}[Intersection, union, set difference, symmetric difference and power set]
   Given two sets $A$ and $B$, we define the following:
@@ -314,7 +314,7 @@ It is often helpful to categorize functions into different categories.
 \end{eg}
 
 \begin{defi}[Bijective function]
-  A function is \emph{bijective} if it is both injective and surjective. i.e.\ it hits everything exactly once.
+  A function is \emph{bijective} if it is both injective and surjective, i.e.\ it hits everything exactly once.
 \end{defi}
 
 \begin{defi}[Permutation]
@@ -322,7 +322,7 @@ It is often helpful to categorize functions into different categories.
 \end{defi}
 
 \begin{defi}[Composition of functions]
-  The \emph{composition} of two functions is a function you get by applying one after another. In particular, if $f: X \rightarrow Y$ and $G: Y\rightarrow Z$, then $g\circ f: X \rightarrow Z$ is defined by $g\circ f(x) = g(f(x))$. Note that function composition is associative.
+  The \emph{composition} of two functions is a function you get by applying one after another. In particular, if $f: X \rightarrow Y$ and $g: Y\rightarrow Z$, then $g\circ f: X \rightarrow Z$ is defined by $g\circ f(x) = g(f(x))$. Note that function composition is associative.
 \end{defi}
 
 \begin{defi}[Image of function]
@@ -447,7 +447,7 @@ Again, we wish to classify different relations.
 \begin{defi}[Equivalence relation]
   A relation is an \emph{equivalence relation} if it is reflexive, symmetric and transitive. e.g.\ (i) and (vi) in the above examples are equivalence relations.
 \end{defi}
-If it is an equivalence relation, we usually write $\sim$ instead of $R$. As the name suggests, equivalence relations are used to describe relations that are similar to equality. For example, if we want to represent rational numbers as a pair of integers, we might have an equivalence relation defined by $(n, m)\sim (p, q)$ iff $nq = mp$, such that two pairs are equivalent if they represent the same rational number.
+If it is an equivalence relation, we usually write $\sim$ instead of $R$. As the name suggests, equivalence relations are used to describe relations that are similar to equality. For example, if we want to represent rational numbers as pairs of integers, we might have an equivalence relation defined by $(n, m)\sim (p, q)$ iff $nq = mp$, such that two pairs are equivalent if they represent the same rational number.
 
 \begin{eg}
   If we consider a deck of cards, define two cards to be related if they have the same suite.
@@ -640,7 +640,7 @@ Then we can write out the fraction $\frac{57}{21}$ in continued fraction form
 \[
   \frac{57}{21} = 2 + \cfrac{1}{1 + \cfrac{1}{2 + \cfrac{1}{2}}}
 \]
-Expanding this continued fractions term by term, we can have the sequence $2, 2 + \frac{1}{1} = 3$, $2 + \frac{1}{1 + \frac{1}{2}} = \frac{8}{3}$. These are called the ``convergents''. The sequence happens to be $\frac{A_i}{B_i}$.
+Expanding this continued fraction term by term, we can have the sequence $2, 2 + \frac{1}{1} = 3$, $2 + \frac{1}{1 + \frac{1}{2}} = \frac{8}{3}$. These are called the ``convergents''. The sequence happens to be $\frac{A_i}{B_i}$.
 
 \subsection{Primes}
 There are a lot of ways we can define prime numbers in $\N$. The definition we will use is the following:
@@ -653,7 +653,7 @@ In this chapter, the objective is to prove things we already know and think are 
 \end{thm}
 
 \begin{proof}
-  If $n\in \N$ is not a prime itself, then by definition $n = ab$. If either $a$ or $b$ is not prime, then that number can be written as a product, say $b = cd$. Then $n = acd$ and so on. Since these numbers are getting smaller, and the process will stop when they are all prime.
+  If $n\in \N$ is not a prime itself, then by definition $n = ab$. If either $a$ or $b$ is not prime, then that number can be written as a product, say $b = cd$. Then $n = acd$ and so on. Since these numbers are getting smaller, the process will stop when they are all prime.
 \end{proof}
 In the proof, we handwaved a bit when we said ``and so on''. We will later come up with the principle of (strong) induction that rigorously justifies this. This is the case for many proofs we will have here.
 
@@ -697,9 +697,9 @@ Also, the proofs give different bounds on when we should expect to see the $k$th
 \end{proof}
 
 \begin{cor}
-  If $p$ is a prime and $p\mid n_1n_2\cdots n_i$, then $p \mid n_i$ for some $i$.
+  If $p$ is a prime and $p\mid n_1n_2\cdots n_k$, then $p \mid n_i$ for some $i$.
 \end{cor}
-Note that when we defined primes, we defined it in terms of factors of $p$. This corollary is the opposite --- it is about how $p$ behaves as a factor of other numbers.
+Note that when we defined $p$ to be prime, we defined it in terms of factors of $p$. This corollary is the opposite --- it is about how $p$ behaves as a factor of other numbers.
 
 \begin{thm}[Fundamental Theorem of Arithmetic]
   Every natural number is expressible as a product of primes in exactly one way. In particular, if $p_1p_2\cdots p_k = q_1q_2\cdots q_l$, where $p_i, q_i$ are primes but not necessarily distinct, then $k = l$. $q_1, \cdots q_l$ are $p_1, \cdots p_k$ in some order.
@@ -812,7 +812,7 @@ More importantly, we will use indicator functions to prove a powerful result.
     &= \sum_x 1 - \sum_i\sum_x i_{A_i}(x) + \sum_{i < j}\sum_x i_{A_i\cap A_j}(x) - \cdots\\
     & + \sum_x (-1)^ni_{A_1\cap A_2\cap A_3\cap \cdots \cap A_n}(x)\\
     &= |X| - \sum_i |A_i| + \sum_{i < j}|A_i\cap A_j|\\
-    & - \sum_{i < j < k}|A_i\cap A_j\cap A_k| + \cdots + (-1)^n|A_1\cap A_2\cap \cdots A_n|\qedhere
+    & - \sum_{i < j < k}|A_i\cap A_j\cap A_k| + \cdots + (-1)^n|A_1\cap A_2\cap \cdots \cap A_n|\qedhere
   \end{align*}
 \end{proof}
 
@@ -910,7 +910,7 @@ We might write $x^{\underline{r}}$ for the polynomial $x(x - 1)\cdots (x - r + 1
 \begin{eg}
   A bank prepares a letter for each of its $n$ customers, saying how much it cares. (Each of these letters costs the customer $\pounds 40$) There are $n!$ ways to put the letters in the envelopes. In how many ways can this be done so that no one gets the right letter (i.e.\ how many \emph{derangements} are there of $n$ elements)?
 
-  We let $X$ be the set of all envelopings (permutation of $n$). $|X| = n!$. For each $i$, let $A_i = \{x\in X: x \text{ assigns the correct letter to customer }i\}$. We want to know $|\bigcap_i \bar A_i|$. We know that $|A_i| = (n - 1)!$ since $i$'s letter gets in $i$'s envelopes and all others can be placed randomly. We have $|A_i\cap A_j| = (n - 2)!$ as well. Similarly, $|A_i\cap A_j \cap A_k| = (n - 3)!$.
+  We let $X$ be the set of all envelopings (permutation of $n$). $|X| = n!$. For each $i$, let $A_i = \{x\in X: x \text{ assigns the correct letter to customer }i\}$. We want to know $|\bigcap_i \bar A_i|$. We know that $|A_i| = (n - 1)!$ since $i$'s letter gets in $i$'s envelope and all others can be placed randomly. We have $|A_i\cap A_j| = (n - 2)!$ as well. Similarly, $|A_i\cap A_j \cap A_k| = (n - 3)!$.
 
   By the inclusion-exclusion formula, we have
   \begin{align*}
@@ -973,7 +973,7 @@ Several proofs so far involved ``take the least integer such that'', e.g.\ divis
 
   Suppose we have $n + 1$ rings. We can move the top $n$ rings to peg C, then move the bottom ring to peg B, then move the $n$ rings from $C$ back to $B$. Assuming $P(n)$ is true, this needs at most $2\times (2^n - 1) + 1 = 2^{n + 1} -1 $ moves.
 
-  Can we do it in fewer moves? To succeed, we must free the bottom ring, so we must shift the top $n$ rings to another pe.g.\ This needs $\geq 2^n - 1$ moves by $P(n)$. Then we need to shift the bottom ring. Then we need to shift the $n$ smaller rings to the big one. This needs $\geq 2^n - 1$ moves by $P(n)$. So this needs $\geq 2^{n + 1} - 1$ moves altogether.
+  Can we do it in fewer moves? To succeed, we must free the bottom ring, so we must shift the top $n$ rings to another peg. This needs $\geq 2^n - 1$ moves by $P(n)$. Then we need to shift the bottom ring. Then we need to shift the $n$ smaller rings to the big one. This needs $\geq 2^n - 1$ moves by $P(n)$. So this needs $\geq 2^{n + 1} - 1$ moves altogether.
 
   So we showed that $P(n)\Rightarrow P(n + 1)$ (we used $P(n)$ four times). By the WPI, $P(n)$ is true for all $n$.
 \end{eg}
@@ -987,7 +987,7 @@ Several proofs so far involved ``take the least integer such that'', e.g.\ divis
 \end{thm}
 
 \begin{proof}
-  Let $P(n)$ be the statement ``for any sets $A_1\cdots A_n$'', we have $|A_1\cup \cdots \cup A_n| = \sum_i|A_i| - \sum_{i < j} |A_i\cap A_j| + \cdots \pm |A_i\cap A_2\cap \cdots \cap A_n|$''.
+  Let $P(n)$ be the statement ``for any sets $A_1\cdots A_n$'', we have $|A_1\cup \cdots \cup A_n| = \sum_i|A_i| - \sum_{i < j} |A_i\cap A_j| + \cdots \pm |A_1\cap A_2\cap \cdots \cap A_n|$''.
 
   $P(1)$ is trivially true. $P(2)$ is also true (see above). Now given $A_1 \cdots A_{n + 1}$, Let $B_i = A_i\cap A_{n + 1}$ for $1 \leq i\leq n$. We apply $P(n)$ both to the $A_i$ and $B_i$.
 
@@ -1049,7 +1049,7 @@ Note that (i) is redundant as it follows from (ii), but we state it for clarity.
       };
     \end{tikz}
   \end{center}
-  Let $P(n)$ be the statement $n - 1$ mutants produces $n$ animals. Given some tree with $n$ animals, remove the top mutant to get two sub-trees, with $n_1$ and $n_2$ animals, where $n_1 + n_2 = n$. If $P(k)$ is true $\forall k < n$, then $P(n_1)$ and $P(n_2)$ are true. So the total number of mutants is $1 + (n_1 - 1) + (n_2 - 1) = n - 1$. So $P(n)$ is true. Hence by strong principle of induction, $P(n)$ is true for all $n$.
+  Let $P(n)$ be the statement ``$n - 1$ mutants produces $n$ animals''. Given some tree with $n$ animals, remove the top mutant to get two sub-trees, with $n_1$ and $n_2$ animals, where $n_1 + n_2 = n$. If $P(k)$ is true $\forall k < n$, then $P(n_1)$ and $P(n_2)$ are true. So the total number of mutants is $1 + (n_1 - 1) + (n_2 - 1) = n - 1$. So $P(n)$ is true. Hence by strong principle of induction, $P(n)$ is true for all $n$.
 \end{eg}
 
 \begin{thm}
@@ -1059,7 +1059,7 @@ Note that (i) is redundant as it follows from (ii), but we state it for clarity.
 \begin{proof}
   Clearly the strong principle implies the weak principle since if $P(n)\Rightarrow P(n + 1)$, then $(P(1)\wedge P(2)\wedge \cdots \wedge P(n))\Rightarrow P(n + 1)$.
 
-  Now show that the weak principle implies the strong principle. Suppose that $P(1)$ is true and $(\forall n)\,P(1)\wedge P(2)\wedge \cdots \wedge P(n - 1)\Rightarrow P(n)$. We want to show that $P(n)$ is true for all $n$ using the weak principle.
+  Now we show that the weak principle implies the strong principle. Suppose that $P(1)$ is true and $(\forall n)\,P(1)\wedge P(2)\wedge \cdots \wedge P(n - 1)\Rightarrow P(n)$. We want to show that $P(n)$ is true for all $n$ using the weak principle.
 
   Let $Q(n) = $ ``$P(k)$ is true $\forall k\leq n$''. Then $Q(1)$ is true. Suppose that $Q(n)$ is true. Then $P(1)\wedge P(2)\wedge\cdots \wedge P(n)$ is true. So $P(n+1)$ is true. Hence $Q(n + 1)$ is true. By the weak principle, $Q(n)$ is true for all $n$. So $P(n)$ is true for all $n$.
 \end{proof}
@@ -1554,7 +1554,7 @@ The real problem is expressed in terms of least upper bounds, or suprema.
   \end{enumerate}
   Similarly, $s\in X$ is a \emph{greatest lower bound} (or \emph{infimum}) if $s$ is a lower bound and any lower bound $t \leq s$.
 \end{defi}
-By definition, the least upper bound for $S$, if exists, is unique.
+By definition, the least upper bound for $S$, if it exists, is unique.
 
 The problem with $\Q$ is that if we let $S = \{q\in \Q: q^2 < 2\}$, then it has no supremum in $\Q$.
 
@@ -1612,7 +1612,7 @@ We make some useful definitions.
   Note that these cases differ by $\sup S\in S$ but $\sup T\not\in T$. $S$ has a maximum element $1$ and the maximum is the supremum. $T$ doesn't have a maximum, but the supremum can still exist.
 \end{eg}
 
-The real numbers has a rather interesting property.
+The real numbers have a rather interesting property.
 \begin{thm}[Axiom of Archimedes]
   Given $r\in \R$, there exists $n\in \N$ with $n > r$.
 \end{thm}
